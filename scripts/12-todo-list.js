@@ -56,13 +56,23 @@ function renderHtml(){
     const todoHtml=`
     <div>${name}</div>
     <div>${duedate}</div>
-    <button onclick="
-      addList.splice(${i},1);
-      renderHtml();" class="delete-btn">Delete
+    <button class="delete-btn js-delete-btn">Delete
     </button>
     `;
     todo+=todoHtml;
-});
+1}); 
+    document.querySelector('.js-text').innerHTML=todo;
+
+    document.querySelectorAll('.js-delete-btn').forEach((deleteBtn,index)=>{
+      deleteBtn.addEventListener('click',()=>{
+        addList.splice(index,1);
+        renderHtml();
+      });
+    });
+  }
+
+
+
   // for(let i=0;i<addList.length;i++){
   //   const text=addList[i];
   //   // const name=text.name;
@@ -73,14 +83,14 @@ function renderHtml(){
   //   <div>${duedate}</div>
   //   <button onclick="
   //     addList.splice(${i},1);
-  //     renderHtml();" class="delete-btn">Delete
+  //     renderHtml();" class="delete-btn ">Delete
   //   </button>
   //   `;
   //   todo+=todoHtml;
   // }
-  console.log(todo);
-  document.querySelector('.js-text').innerHTML=todo;
-}
+  //console.log(todo);
+  
+
 
 function add(){
   const inputElement=document.querySelector('.input');
@@ -95,4 +105,8 @@ function add(){
   renderHtml();
 }
 
+
+document.querySelector('.js-add-btn').addEventListener('click',()=>{
+  add();
+});
 

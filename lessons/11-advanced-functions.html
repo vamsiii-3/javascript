@@ -109,6 +109,29 @@ btnElement.addEventListener('click',()=>{console.log('click2')});
 */
 
 
+//.filter()=>returns truthy values only
+//remove negative numbers
+
+
+console.log([1,2,-2].filter((value,index)=>{
+ /* if(value>0){
+    return true;
+  }
+  else{
+    return false;
+  }
+*/
+  return value>0;
+}));
+
+
+console.log([1,2,3].map((value,index)=>{
+  return value*2;
+}));
+
+
+//shortcut of arrow function:
+console.log([1,2,3].map(value=>value*2));
 </script>
 </body>
 </html>
