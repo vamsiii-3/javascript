@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>dom</title>
+</head>
+<body>
+  <button>hello</button>
+  <button class="js-button">second button</button>
+<script>
+  console.log(document.querySelector('button'));
+  document.querySelector('button').innerHTML='changed';
+  const buttonElement=document.querySelector('.js-button');
+  console.log(buttonElement);
+
+  /*
+  console.log(document.title);
+  document.title='changed';
+  console.log(document.body);
+  console.log(typeof document.body);
+
+  console.log(document.body.innerHTML);
+  document.body.innerHTML='<button>hello</button>';
+  console.log(document.body.innerHTML);
+  */
+
+  /*
+  document.body.innerHTML='hello';
+  document.title='dom';
+  */
+
+
+  /*
+  const product1={
+    name:'ball',
+    price:2095
+  };
+  const product2={
+    name:'ball',
+    price:2095
+  };
+  const product3=product2;
+  //console.log(product1);
+  // product1.price+=500;
+  // console.log(product1.price);
+  // product1['delivery-time']='3 days';
+  // console.log(product1);
+
+  function comparePrice(product1,product2){
+    if(product1.price<product2.price){
+      return console.log(product1);
+    }
+    else{
+      return console.log(product2);
+    }
+  }
+//comparePrice(product1,product2);
+function isSameProduct(product1,product2){
+  if(product1===product2){
+    console.log('true');
+  }
+  else{
+    console.log('false');
+  }
+}
+//isSameProduct(product2,product3)
+console.log('Good Morning'.toLowerCase());
+console.log('test'.repeat(2));
+*/
+</script>
+</body>
+</html>

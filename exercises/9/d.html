@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+<input class="text" onkeydown="key();"
+ placeholder="Name">
+<button onclick="generate();">Submit</button>
+<p class="name"></p>
+<script>
+  function key(){
+    if(event.key==='Enter'){
+      generate();
+      }
+   }
+  function generate(){
+    const input=document.querySelector('.text');
+    const name=input.value;
+    document.querySelector('.name').innerHTML=`Your name is : ${name}`;
+  }
+</script>
+</body>
+</html>

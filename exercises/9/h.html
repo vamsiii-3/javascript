@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+<input class="input" placeholder="Type something" onkeyup="generate();">
+<p class="text"></p>
+<script>
+  function generate(){
+    const text=document.querySelector('.input');
+    const letter=text.value;
+    document.querySelector('.text').innerHTML=`${letter}`;
+  }
+</script>
+</body>
+</html>
