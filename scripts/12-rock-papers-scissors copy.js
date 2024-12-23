@@ -22,6 +22,28 @@ function autoPlay(){
   }
 }
 
+document.querySelector('.js-rock-btn').addEventListener('click',()=>{
+  playgame('rock');
+});
+document.querySelector('.js-paper-btn').addEventListener('click',()=>{
+  playgame('paper');
+});
+document.querySelector('.js-scissors-btn').addEventListener('click',()=>{
+  playgame('scissors');
+});
+
+document.body.addEventListener('keydown',(Event)=>{
+  if(Event.key==='r'){
+    playgame('rock');
+  }
+  else if (Event.key==='p'){
+    playgame('paper');
+  }
+  else if(Event.key==='s'){
+    playgame('scissors');
+  }
+});
+ 
 function playgame(player_move){
 const computerMove=computer_move();
 if(player_move==='rock'){
